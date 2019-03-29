@@ -2,7 +2,7 @@
 %global pypi_name pulp_file
 
 Name:           python-%{pypi_name}
-Version:        0.0.1b9
+Version:        0.0.1b10
 Release:        1%{?dist}
 Summary:        File plugin for the Pulp Project
 
@@ -12,7 +12,7 @@ Source0:        https://files.pythonhosted.org/packages/source/p/%{pypi_name}/pu
 BuildArch:      noarch
  
 BuildRequires:  python3-devel
-BuildRequires:  python3dist(pulpcore-plugin) = 0.1.0b21
+BuildRequires:  python3dist(pulpcore-plugin) ~= 0.1rc1
 BuildRequires:  python3dist(setuptools)
 
 %description
@@ -27,7 +27,7 @@ home...
 Summary:        %{summary}
 %{?python_provide:%python_provide python3-%{pypi_name}}
  
-Requires:       python3dist(pulpcore-plugin) = 0.1.0b21
+Requires:       python3dist(pulpcore-plugin) ~= 0.1rc1
 Requires:       python3dist(setuptools)
 %description -n python3-%{pypi_name}
 pulp_file Plugin This is the pulp_file Plugin for Pulp Project 3.0+ < This
@@ -61,5 +61,8 @@ rm -rf %{pypi_name}.egg-info
 %{python3_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
 
 %changelog
+* Fri Mar 29 2019 Mike DePaulo <mikedep333@redhat.com> - 0.0.1b10-1
+- Update for 0.0.1b10
+
 * Tue Mar 26 2019 Mike DePaulo <mikedep333@redhat.com> - 0.0.1b9-1
 - Initial package.
