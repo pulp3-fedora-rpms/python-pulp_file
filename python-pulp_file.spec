@@ -12,7 +12,7 @@ Source0:        https://files.pythonhosted.org/packages/source/p/%{pypi_name}/pu
 BuildArch:      noarch
  
 BuildRequires:  python3-devel
-BuildRequires:  python3dist(pulpcore-plugin) ~= 0.1rc1
+BuildRequires:  python3dist(pulpcore-plugin) >= 0.1rc1
 BuildRequires:  python3dist(setuptools)
 
 %description
@@ -27,7 +27,7 @@ home...
 Summary:        %{summary}
 %{?python_provide:%python_provide python3-%{pypi_name}}
  
-Requires:       python3dist(pulpcore-plugin) ~= 0.1rc1
+Requires:       python3dist(pulpcore-plugin) >= 0.1rc1
 Requires:       python3dist(setuptools)
 %description -n python3-%{pypi_name}
 pulp_file Plugin This is the pulp_file Plugin for Pulp Project 3.0+ < This
